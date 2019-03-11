@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+        
+        
+</head>
+<body>
+    
+    
+    <div id="quiz">
+      
+      <div class="question-info">
+             <h1>{{heading}}</h1>
+             
+             
+             <div v-for="question in questions">
+                 <p>{{question.questionId}}</p>
+                 <p>{{question.questionsAsk}}</p>
+                 <div> 
+                 <p><input type="radio" name=AnswerA value=AnswerA>{{question.questionAnswers}}</p>
+                 <p><input type="radio" name=AnswerB value=AnswerB>{{question.questionAnswers}}</p>
+                 <p><input type="radio" name=AnswerB value=AnswerB>{{question.questionAnswers}}</p>
+                 <p><input type="radio" name=AnswerB value=AnswerB>{{question.questionAnswers}}</p>
+                </div>
+             </div>
+            
+             
+          </div>
+      </div> 
+    </div>
+<script>
+    const quiz = new Vue({
+    el: "#quiz",
+    data:{
+        heading: "General Knowledge Quiz",
+        
+        questions:[
+            {
+                questionId:1,
+                questionsAsk: "How many stars are there on the flag of China?",
+                questionAnswers: [2,5,7,1],
+            },{
+                questionId:2,
+                questionsAsk: "What is the currency of Mongolia?",
+                questionAnswers: ["Yena","Kirgin","Topchok","Tugrik"],
+                    
+            },{
+                questionId:3,
+                questionsAsk: "In which country is there a natural gas pit nicknamed the ‘Door to Hell’ that has been on fire since 1971",
+                questionAnswers: ["Turkmenistan","Azerbaijan","Bulgaria","Iceland"],
+            }, {
+                questionId:4,
+                questionsAsk:"In 2013 which two airlines merged to become the world’s largest airline?",
+                questionAnswers: [2,5,7,1],   
+            }
+        ]
+  
+        
+        }
+    })
+</script>
+
+       
+</body>
+</html>
